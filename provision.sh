@@ -3,7 +3,7 @@
 VAGRANT_HOST_DIR=/mnt/host_machine
 
 ########################
-# Git setup fdfd
+# Git setup fdfdgfg
 ########################
 sudo apt-get -y install git
 
