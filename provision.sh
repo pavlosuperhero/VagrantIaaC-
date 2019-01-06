@@ -72,4 +72,8 @@ sudo ln -s /etc/nginx/sites-available/jenkins /etc/nginx/sites-enabled/
 sudo service nginx restart
 sudo service jenkins restart
 
+# ########################
+# # Tested keys
+# ########################
+
 echo "Success"
