@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.vm.box_check_update = false
+  config.vm.network "private_network", ip: "192.168.10.11"
+
+  #config.vm.synced_folder ".", "/mnt/host_machine"
+  config.vm.provider :virtualbox do |vb|
+      vb.name = "DeployHost"
+      vb.memory = "2048"
+  end
+
+  config.vm.hostname = "deploy-host"
+  
+  config.vm.provision  "shell", :path => "provision.sh", :privileged => true
+  #end
+
+end
